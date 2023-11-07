@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Update information</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900;1000&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <h1 class="title">Update information</h1>
+                <form class="form" id="form">
+                    <div class="choose-avatar-group" id="choose-avatar-btn">
+                        <!-- PREVIEW -->
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1"
+                            stroke="currentColor"
+                            style="width: 60px"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                            />
+                        </svg>
+
+                        <img
+                            src="https://picsum.photos/400/400"
+                            class="img-preview"
+                            id="img-preview"
+                            style="display: none"
+                        />
+                        <input
+                            id="avatar-input"
+                            name="avatar"
+                            type="text"
+                            name="avatar"
+                            style="display: none"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Full name</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            placeholder="Type your full name"
+                            name="full-name"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            placeholder="Type your email"
+                            name="email"
+                        />
+                    </div>
+
+                    <button class="btn btn-gradient" type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="dialog" id="dialog" style="display: none">
+            <div class="dialog-container" id="dialog-container" style="display: none">
+                <div class="search-group">
+                    <input type="text" placeholder="Search photo" id="search-input" />
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="#666"
+                        class="icon"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                        />
+                    </svg>
+                </div>
+                <div class="photo-grid" id="photo-grid">
+                    <!-- RENDER LIST IMAGE HERE -->
+                </div>
+
+                <button class="btn btn-primary" id="close-dialog-btn">Close</button>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
